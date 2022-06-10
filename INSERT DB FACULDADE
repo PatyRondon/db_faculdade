@@ -1,0 +1,305 @@
+use db_faculdade;
+INSERT INTO tipo_telefone
+	(tipo_telefone)
+VALUES
+	('celular'),
+    ('comerc'),
+    ('residenc');
+    
+ INSERT INTO departamento    
+	(nome_departamento)
+VALUES
+	('Ciencias Humanas'),
+    ('Matematica'),
+	('Biologicas'),
+    ('Estagio'),
+    ('Tec Informação');
+    
+INSERT INTO disciplina
+	(nome_disciplina, carga_horaria, descricao, num_alunos,fk_cod_departamento)
+VALUES
+	('Raciocinio logico', '110', 'Dominar a Materia', '20', '7'),
+    ('Pscicologia cogn', '150', 'Dominar a Materia', '25','6'),
+    ('Eletronica digital','100', 'Dominar a Materia', '30', '7'),
+    ('Programação em C','150', 'Dominar a Materia', '20', '10'),
+    ('Geologia','120', 'Dominar a Materia', '20', '6'),
+    ('Genetica', '200', 'Dominar a Materia', '30','8'),
+    ('Letras', '200', 'Dominar a Materia','25', '6'),
+    ('Banco de Dados', '150', 'Dominar a Materia', '30','10'),
+    ('Logica de Prog', '100', 'Dominar a Materia', '25', '10'),
+    ('Fator RH', '200', 'Dominar a Materia', '28', '8'),
+    ('Estagio TI', '110', 'Dominar a Materia', '30','9'),
+    ('Matematica I', '200', 'Dominar a Materia', '25', '7'),
+    ('Matematica II', '150','Dominar a Materia','30','7'),
+    ('Historia Antiga', '200', 'Dominar a Materia', '25','6'),
+    ('Historia da Arte','150', 'Dominar a Materia', '29', '6'),
+    ('Historia Medieval', '200', 'Dominar a Materia', '28','6'),
+    ('Algoritimo', '200', 'Dominar a Materia', '24','7'),
+    ('Fundamentos Matemat', '100', 'Dominar a Materia', '25','7'),
+    ('Hist. da Matemat', '100', 'Dominar a Materia', '26','7'),
+    ('Xadrez', '80', 'Dominar a Materia', '20', '7'),
+    ('Botanica', '100', 'Dominar a Materia', '25','8'),
+    ('Zoologia', '110', 'Dominar a Materia', '25', '8'),
+    ('Fitopatologia', '100', 'Dominar a Materia', '29','8'),
+    ('Morfologia', '150', 'Dominar a Materia', '24','8'),
+    ('Ecologia', '100', 'Dominar a Materia', '20','8'),
+    ('Integral I', '110', 'Dominar a Materia', '29','7'),
+    ('Integral II', '150', 'Dominar a Materia', '30','7'),
+    ('Geometria Analit', '110', 'Dominar a Materia', '30', '7'),
+    ('Geometria Plana', '150', 'Dominar a Materia', '25','7'),
+    ('Calculo Diferencial', '110', 'Dominar a Materia', '28','7'),
+    ('Algebra Linear', '110', 'Dominar a Materia', '30','7');
+    
+INSERT INTO tipo_logradouro
+	(cod_tipo_logradouro, tipo_logradouro)
+VALUES
+	('1', 'Avenida'),
+    ('2', 'Aeroporta'),
+    ('3', 'Avenida'),
+    ('4', 'Chacara'),
+    ('5', 'Campo'),
+    ('6', 'Condominio');
+    
+INSERT INTO endereco
+	(cod_endereco, nome_rua, numero_rua, complemento, CEP, fk_cod_tipo_logradouro)
+VALUES
+	('1', 'QI 01', '02', 'Guara 1', '71020080', '1'),
+    ('2', 'QI 09', '06', 'Guara 1', '71020080', '1'),
+    ('3', 'QI 09', '08', 'Lago Sul', '70080020', '2'),
+    ('4', 'QI 11', '10', 'Lago Sul', '70080020', '2'),
+    ('5', 'Quadra 2', '15', 'Cruzeiro', '71030010', '6'),
+    ('6', 'Quadra 3', '20', 'Cruzeiro', '71030010', '6'),
+    ('7', 'Quadra 5', '13', 'Cruzeiro', '71030010', '6'),
+    ('8', 'Rua Peixoto', '16', 'PLanltina', '72030020', '5'),
+    ('9', 'Rua Peixoto', '26', 'PLanltina', '72030020', '5'),
+    ('10', 'Rua Peixoto', '06', 'PLanaltina', '72030020', '5'),
+    ('11', 'Quadra QRO A', '18', 'Candanga', '72030020', '3'),
+    ('12', 'Quadra QRO B', '03', 'Candanga', '72030020', '3'),
+    ('13', 'Quadra QRO C', '06', 'Candanga', '72030020', '3'),
+    ('14', 'Quadra QRO D', '08', 'Candanga', '72030020', '3'),
+    ('15', 'QNL 10', '12', 'Taguatinga', '72020080', '1'),
+    ('16', 'QNL 11', '15', 'Taguatinga', '72020080', '1'),
+    ('17', 'QNL 12', '14', 'Taguatinga', '72020080', '1'),
+    ('18', 'QNL 13', '03', 'Taguatinga', '72020080', '1'),
+    ('19', 'Rua Gladioli', '11', 'Chacara 11', '72020030', '4');
+    
+INSERT INTO telefone
+	(cod_telefone, num_telefone, fk_cod_tipo)
+VALUES
+	('1', '3391-0020', '9'),
+    ('3', '3351-0022', '9'),
+    ('4', '3291-1220', '8'),
+    ('5', '2391-0020', '8'),
+    ('6', '9999-5020', '7'),
+    ('7', '9899-5020', '7'),
+    ('8', '9898-1220', '7'),
+    ('9', '9899-5020', '7'),
+    ('10', '9890-5024', '7'),
+    ('11', '98485-5020', '7'),
+    ('12', '3446-5958', '8'),
+	('13', '3246-5957', '8'),
+    ('14', '3146-5857', '8'),
+    ('15', '2246-5959', '8'),
+    ('16', '3244-5957', '8'),
+    ('17', '246-5950', '8'),
+    ('18', '4246-5956', '9');
+    
+INSERT INTO professor
+	(cod_professor, nome_professor, sobrenome_professor, status, fk_cod_departamento)
+VALUES
+	('1', 'Luis', 'Alves', '1' , '6'),
+    ('2', 'Pedro', 'Macedo', '1', '7'),
+    ('3', 'Manoel', 'Ramalho','0', '8'),
+    ('4', 'Francisco', 'Cardiano', '0','9'),
+    ('5', 'Paulo', 'Alves', '0', '6'),	
+    ('6', 'Marcia', 'Rondon', '1', '7'),
+    ('7', 'Patricia', 'Monteiro', '1', '8'),
+    ('8', 'Mariana', 'Alves', '1', '9'),
+    ('9', 'Renilda', 'Figueiredo', '1', '8'),
+    ('10', 'Tatiana', 'Bueno', '1', '7');
+
+INSERT INTO curso
+	(cod_curso, nome_curso, fk_cod_departamento)
+VALUES
+	('1', 'Engenharia software', '10'),
+    ('2', 'Analise de sistemas', '10'),
+    ('3', 'Biologia', '8'),
+    ('4', 'Historia', '6'),
+    ('5', 'Matematica', '7'),
+    ('6', 'Engenharia eletrica', '10'),
+    ('7', 'Pscicologia', '6'),
+    ('8', 'Banco de Dados', '10'),
+    ('9', 'Zootecnia', '8'),
+    ('10', 'Botanica', '8');
+    
+INSERT INTO turma
+	(cod_turma, periodo, num_alunos, dt_inicio, dt_fim, fk_cod_curso)
+VALUES
+	('1', '2018/22', '30', '2018-02-02', '2022-02-12', '3'),
+    ('2', '2018/22', '28', '2019-02-04', '2023-04-12', '4'),
+	('3', '2018/22', '35', '2018-02-02', '2022-02-12', '8'),
+    ('4', '2020/24', '30', '2020-02-02', '2024-04-12', '7'),
+    ('5', '2018/22', '35', '2018-02-02', '2022-02-12', '3'),
+    ('6', '2018/22', '25', '2019-02-04', '2023-04-12', '5'),
+	('7', '2020/24', '35', '2020-02-02', '2024-04-12', '10'),
+	('8', '2019/22', '30', '2019-02-04', '2022-02-12', '1');
+
+INSERT INTO curso_disciplina
+	(fk_cod_curso, fk_cod_disciplina)
+VALUES
+	('10', '30'),
+    ('3', '25'),
+    ('5', '29'),
+    ('9', '24'),
+    ('6', '15'),
+    ('3', '10'),
+    ('6', '9'),
+    ('3', '21'),
+    ('4','16'),
+    ('10', '23'),
+    ('5', '13'),
+    ('7', '2'),
+    ('5', '17'),
+    ('5', '28'),
+    ('5', '26'),
+    ('5', '27'),
+    ('8', '1'),
+    ('2', '1'),
+    ('3', '6'),
+    ('2', '3'),
+    ('4', '14'),
+    ('10', '21'),
+    ('9', '22'),
+    ('6', '12'),
+    ('1', '1');
+
+INSERT INTO aluno
+	(RA, nome_aluno, sobrenome_aluno, CPF, status, sexo, nome_pai, nome_mae, email, whatsapp, fk_cod_curso, fk_cod_turma, fk_cod_endereco)
+VALUES   
+	('1', 'Flavio', 'Alves', '81683308115', '1', 'M', 'Jose', 'Maria', 'flavio@gmail.com', '8485-8838', '1', '2', '4'),
+    ('2', 'Mario', 'Alves', '81683308118', '0', 'M', 'Lucas', 'Marilia', 'mario@gmail.com', '8385-8838', '2', '2', '3'),
+    ('3', 'Paulo', 'Souza', '82345508112', '1', 'M', 'Joao', 'Josefa', 'paulo@gmail.com', '9844-2030', '3', '1', '1'),
+    ('4', 'Mariana', 'Lima','83345508113', '1', 'F', 'Josemar', 'Maria', 'mariana@gmail.com', '8844-2030', '4', '3', '2'),
+    ('5', 'Maria', 'Duarte','83345508114', '0', 'F', 'Mario', 'Mariana', 'maria@gmail.com', '9844-2030', '5', '4', '5'),
+    ('6', 'Patricia', 'Rondon','83345508115', '1', 'F', 'Jose', 'Maria', 'patya@gmail.com', '8844-2030', '6', '5', '6'),
+    ('7', 'Amelia', 'Goncalves','83335508112', '1', 'F', 'Joao', 'Renilda', 'amelia@gmail.com', '9842-2030', '7', '6', '6'),
+    ('8', 'Marcos', 'Alves','83335508113', '1', 'M', 'Lucas', 'Maria', 'marcos@gmail.com', '9842-2030', '8', '7', '7'),
+    ('9', 'Alexandre', 'Gontijo','83335508121', '1', 'M', 'Joao', 'Lurde', 'alex@gmail.com', '9822-2030', '9', '8', '8'),
+    ('10', 'Renata', 'Goncalves','83335508221', '1', 'F', 'Lucas', 'Maria', 'renata@gmail.com', '8844-2030', '10', '1', '9'),
+    ('11', 'Regina', 'Moraes','83335508331', '1', 'F', 'Romario', 'Josefa', 'regina@gmail.com', '9804-2030', '1', '1', '10'),
+    ('12', 'Anderson', 'Lima','83335508112', '1', 'M', 'Lucas', 'Maria', 'ander@gmail.com', '8844-2030', '2', '2', '11'),
+    ('13', 'Rodrigo', 'Moreno','83335508441', '1', 'M', 'Jose', 'Maria', 'rodrigo@gmail.com', '8844-2030', '3', '3', '12'),
+    ('14', 'Debora', 'Goncalves','83335588111', '1', 'F', 'Lucas', 'Lucia', 'debora@gmail.com', '9844-2030', '4', '4', '13'),
+    ('15', 'Jose', 'Cardiano','83335508113', '1', 'M', 'Mario', 'Deusa', 'jose@gmail.com', '8844-2030', '5', '5', '14'),
+    ('16', 'Mario', 'Gomes','83335508114', '0', 'M', 'Lucas', 'Marlene', 'mario@gmail.com', '9844-2018', '6', '6', '15'),
+    ('17', 'Orlando', 'Almeida','83335508115', '1', 'M', 'Alex', 'Sonia', 'orland@gmail.com', '8844-2030', '7', '7', '16'),
+    ('18', 'Ana', 'Almeida','83335508111', '1', 'F', 'Lucas', 'Maria', 'ana@gmail.com', '9844-2050', '8', '8', '17'),
+    ('19', 'Nilce', 'Goncalves','83335508110', '1', 'F', 'Jose', 'Maria', 'nilce@gmail.com', '8844-2030', '9', '2', '18'),
+    ('20', 'Felipe', 'Santos','83336608111', '1', 'M', 'Lucas', 'Maria', 'felipe@gmail.com', '9844-2030', '10', '3', '19');
+
+INSERT INTO telefone_aluno
+	(fk_RA, fk_cod_telefone)
+value
+	('1', '1'),
+    ('1', '4'),
+    ('1', '8'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '1'),
+    ('5', '4'),
+    ('5', '8'),
+    ('6', '2'),
+    ('7', '5'),
+    ('8', '6'),
+    ('9', '1'),
+    ('9', '4'),
+    ('9', '8'),
+    ('10','7'),
+    ('11', '9'),
+    ('12', '10'),
+    ('13', '11'),
+    ('14', '12'),
+    ('15', '13'),
+    ('16', '14'),
+    ('17', '15'),
+    ('18', '16'),
+    ('19', '17'),
+    ('20', '18');  
+
+INSERT INTO historico
+	(dt_inicio, dt_fim, fk_RA)
+VALUES
+	('2019-02-04', '2023-04-12', '4'),
+    ('2018-02-02', '2022-02-12', '8'),
+    ('2020-02-02', '2024-04-12', '7'),
+    ('2018-02-02', '2022-02-12', '3'),
+    ('2019-02-04', '2023-04-12', '5'),
+    ('2020-02-02', '2024-04-12', '10'),
+    ('2019-02-04', '2022-02-12', '1'),
+    ('2019-02-04', '2023-04-12', '2'),
+    ('2018-02-02', '2022-02-12', '6'),
+    ('2019-02-04', '2022-02-12', '8'),
+    ('2019-02-04', '2023-04-12', '9'),
+    ('2019-02-04', '2023-04-12', '10'),
+    ('2018-02-02', '2022-02-12', '11'),
+	('2018-02-02', '2022-02-12', '12'),
+	('2018-02-02', '2022-02-12', '13'),
+    ('2020-02-02', '2024-04-12', '14'),
+    ('2020-02-02', '2024-04-12', '15'),
+    ('2020-02-02', '2024-04-12', '16'),
+    ('2020-02-02', '2024-04-12', '17'),
+	('2018-02-02', '2022-02-12', '18'),
+    ('2018-02-02', '2022-02-12', '19'),
+    ('2018-02-02', '2022-02-12', '20');
+ 
+INSERT INTO disciplina_historico
+	(fk_cod_historico, fk_cod_disciplina, nota, frequencia)
+VALUES
+	('1', '1', '70', '90'),
+    ('2', '1', '80', '80'),
+    ('3', '1', '10', '70'),
+    ('4', '2', '80', '100'),
+    ('5', '3', '70', '50'),
+    ('6', '6', '90', '85'),
+	('7', '9', '90', '85'),
+	('8', '10', '90', '85'),
+	('9', '12', '90', '85'),
+	('10', '13', '90', '85'),
+	('11', '14', '90', '85'),
+	('12', '15', '90', '85'),
+	('13', '16', '90', '85'),
+	('14', '17', '90', '85'),
+	('15', '21', '90', '85'),
+	('16', '22', '90', '85'),
+    ('17', '23', '10', '70'),
+    ('18', '24', '10', '70'),
+    ('19', '25', '10', '70'),
+    ('20', '26', '10', '70'),
+	('21', '27', '10', '70'),
+    ('22', '28', '10', '70'),
+    ('23', '29', '10', '70'),
+    ('24', '30', '10', '70');
+	
+INSERT INTO professor_disciplina
+	(fk_cod_professor, fk_cod_disciplina)
+VALUES
+	('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '6'),
+    ('5', '9'),
+    ('6', '10'),
+    ('7', '12'),
+    ('8', '13'),
+    ('9', '14'),
+    ('10', '15'),
+    ('2', '16'),
+    ('4', '17'),
+    ('6', '21'),
+    ('8', '22'),
+    ('1', '23'),
+    ('2', '24'),
+    ('9', '25'),
+    ('7', '26');
+    
