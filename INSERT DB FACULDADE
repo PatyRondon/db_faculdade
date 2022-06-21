@@ -326,3 +326,6 @@ VALUES
     ('18', '19'),
     ('19', '20'),
     ('20', '21');
+
+UPDATE aluno SET fk_cod_curso = NULL, fk_cod_turma = NULL
+Where RA IN (2, 5, 16);
